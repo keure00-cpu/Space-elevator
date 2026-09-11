@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Elevator Academy</title>
 
-  <meta
-    name="description"
-    content="Space Elevator Academy: curso conceitual sobre física, engenharia e futuro do elevador espacial."
-  >
+<style>
+:root{
+  --bg:#060812;
+  --panel:#0f1528;
+  --card:#0c1020;
+  --line:rgba(255,255,255,.1);
+  --green:#3af0b5;
+  --blue:#4d8eff;
+  --text:#eef0f7;
+  --muted:#8992af;
+  --mono:monospace;
+  --font:Arial,sans-serif;
+}
 
-  <title>Space Elevator Academy</title>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 
-  <style>
-    :root {
-      --bg: #060812;
-      --bg-card: #0c1020;
-      --bg-panel: #0f1528;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-mid: rgba(255, 255, 255, 0.15);
-      --accent: #3af0b5;
-      --accent2: #4d8eff;
-      --text: #eef0f7;
-      --muted: #7b84a3;
-      --faint: #363d55;
-      --mono: "Courier New", monospace;
-      --sans: Arial, Helvetica, sans-serif;
-    }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  line-height:1.6;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background-image:
+    linear-gradient(rgba(58,240,181,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(58,240,181,.03) 1px,transparent 1px);
+  background-size:60px 60px;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.container{
+  width:min(1140px,calc(100% - 40px));
+  margin:auto;
+}
 
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(58, 240, 181, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(58, 240, 181, 0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--line);
-      background: rgba(6, 8, 18, 0.9);
-      back
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:10;
+  border-bottom:1px solid var(--line);
+  backgr
